@@ -1,0 +1,2 @@
+module PowerHourHelper
+end

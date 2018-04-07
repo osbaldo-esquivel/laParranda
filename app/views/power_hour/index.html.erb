@@ -1,0 +1,35 @@
+<title>Power Hour</title>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">Power Hour</h1>
+            <p class="lead">Play some music and hit the Drink buttton when you're ready. Drink a shot of beer each time you hear the ring!</p>
+            <button type="button" 
+            class="btn btn-success" 
+            id="drinkButt">Drink</button>
+            <br /><br /><p id="counter"></p>
+
+            <script>
+                document.getElementById("drinkButt").addEventListener("click",function() {
+                    var sixtyMinutes = new Date();
+                    sixtyMinutes.setMinutes(sixtyMinutes.getMinutes() + 60);
+                    var counterFunc = setInterval(function() {
+                        var timeNow = new Date().getTime();
+                        var diff = sixtyMinutes - timeNow;
+                        var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                        var secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                        // Display the result in the element with id="demo"
+                        document.getElementById("counter").innerHTML = mins + ":" + secs;
+
+                        // If the count down is finished, write some text 
+                        if (diff < 0) {
+                            clearInterval(counterFunc);
+                            document.getElementById("counter").innerHTML = "Congrats on the Power Hour!";
+                        }
+                    }, 1000);
+                });
+            </script>
+        </div>
+    </div>
+</div>
