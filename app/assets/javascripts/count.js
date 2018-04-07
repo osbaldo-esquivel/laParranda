@@ -17,6 +17,11 @@ document.getElementById("drinkButt").addEventListener("click",function() {
         if(secs == 0) {
             var audio = new Audio("/audios/bell.mp3");
             audio.play();
+            var msg = document.getElementById("drinkFlash");
+            msg.innerText = "Drink!";
+            setTimeout(function() {
+                msg.innerText = "";
+            },3000);
         }
     }, 1000);
 });

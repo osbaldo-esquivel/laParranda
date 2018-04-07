@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -13,6 +11,7 @@
     <script src="/assets/jquery.js" type="text/javascript"></script>
     <script src="/assets/jquery_ujs.js" type="text/javascript"></script>
     <script src="/assets/bootstrap.min.js" type="text/javascript"></script>
+    
     <style>
       body {
         padding-top: 54px;
@@ -22,13 +21,12 @@
           padding-top: 56px;
         }
       }
-
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">La Parranda</a>
+        <a class="navbar-brand" href="<%= welcome_index_path %>">La Parranda</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,19 +50,19 @@
         </div>
       </div>
     </nav>
+
     <%= yield %>
+    
     <div class="container">
       <div class="row">
-        <footer class="page-footer font-small blue pt-4 mt-4">
-    <!--Copyright-->
-    <div class="footer-copyright py-3 text-center">
-        © 2018 Copyright: OE, Inc.
+        <footer>
+          <div class="footer-copyright py-3 text-center">
+          © 2018 Copyright: OE, Inc.
+          </div>
+        </footer>
+      </div>
     </div>
-    <!--/.Copyright-->
-
-</footer>
-    </div>
-  </body>
+</body>
 
 </html>
 
