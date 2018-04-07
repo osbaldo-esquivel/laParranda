@@ -14,3 +14,18 @@
  *= require_self
  */
 
+ .cards {
+    border-style: solid;
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
