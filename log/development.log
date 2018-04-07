@@ -10209,3 +10209,38 @@ Processing by PowerHourController#index as HTML
 Completed 200 OK in 16ms (Views: 12.1ms)
 
 
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-06 19:57:49 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 11.3ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-06 20:06:08 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 8.8ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-06 20:08:14 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 9.6ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-06 20:08:46 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 9.6ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-06 20:10:22 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 10.6ms)
+
+
