@@ -6,11 +6,17 @@ document.getElementById("drinkButt").addEventListener("click",function() {
         var diff = sixtyMinutes - timeNow;
         var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         var secs = Math.floor((diff % (1000 * 60)) / 1000);
-
+        if(secs < 10) { secs = "0" + secs; }
         document.getElementById("counter").innerHTML = mins + ":" + secs;
+
         if (diff < 0) {
             clearInterval(counterFunc);
             document.getElementById("counter").innerHTML = "Congrats on the Power Hour!";
+        }
+
+        if(secs == 0) {
+            var audio = new Audio("/audios/bell.mp3");
+            audio.play();
         }
     }, 1000);
 });
