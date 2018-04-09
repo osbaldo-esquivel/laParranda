@@ -32,3 +32,5 @@
 en:
   hello: "Hello world"
   about: "This site came about because there is a severe lack of drinking game apps that can be played in a browser. I've combined some of my favorites into one app and I'll be adding more as time goes on."
+  warning: "As always, moderate the amount you drink. No one likes to deal with the next day after getting too drunk. Playing Power Hour should be about 5-6 beers in one hour and King's Cup can be about the same, so that's something to consider."
+  end: "Anyway, if you come across any issues in the app, please let me know "
