@@ -48,4 +48,18 @@ class UserTest < ActiveSupport::TestCase
       assert_not @user.valid?, "#{invalid_email.inspect} should not be valid"
     end
   end
+
+  test "email addresses should be unique" do 
+    dup_user = @user.dup
+    dup_user.email = @user.email.upcase
+    @user.save 
+    assert_not dup_user.valid?
+  end
+
+  test "email address should be downcase before save" do 
+    original_email = "mIxEDcASe@GmaIL.CoM"
+    @user.email = original_email
+    @user.save 
+    assert_equal original_email.downcase, @user.reload.email 
+  end
 end
