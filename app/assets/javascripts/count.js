@@ -1,3 +1,4 @@
+var begin = true;
 document.getElementById("drinkButt").addEventListener("click",function() {
     var sixtyMinutes = new Date();
     sixtyMinutes.setMinutes(sixtyMinutes.getMinutes() + 60);
@@ -13,9 +14,14 @@ document.getElementById("drinkButt").addEventListener("click",function() {
             clearInterval(counterFunc);
             document.getElementById("counter").innerHTML = "Congrats on the Power Hour!";
         }
+        
+        var applause = new Audio("/audios/applause.mp3");
+        if(begin == true) {
+            applause.play();
+            begin = false;
+        }
 
         var cheers = document.getElementById("cheers");
-        console.log(cheers);
         if(secs == 0) {
             var audio = new Audio("/audios/bell.mp3");
             audio.play();
