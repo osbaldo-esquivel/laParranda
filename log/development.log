@@ -11186,3 +11186,33 @@ Migrating to AddPasswordDigestToUsers (20180411010551)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "davidesquivel@gmail.com"], ["id", 1], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-04-10 20:40:15 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1237ms (Views: 1208.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-10 20:46:20 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-10 20:46:47 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-10 20:47:50 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
