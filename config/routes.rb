@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'power_hour/index'
 
   root 'welcome#index'
-  
+  resources :users
 end

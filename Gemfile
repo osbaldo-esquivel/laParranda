@@ -21,6 +21,7 @@ gem 'pg'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'sqlite3'
