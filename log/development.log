@@ -11298,3 +11298,69 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 12966ms (Views: 22.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-11 17:58:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 115ms (Views: 109.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-04-11 18:19:09 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_title' for #<#<Class:0x007f9a14e7a670>:0x007f9a14e78938>):
+    22:         }
+    23:       }
+    24:     </style>
+    25:     <title><%= full_title(yield(:title)) %></title>
+    26:   </head>
+    27:   <body>
+    28:     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__3357230306997976347_70149872485920'
+Started GET "/" for 127.0.0.1 at 2018-04-12 19:58:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 596ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_title' for #<#<Class:0x007f9a1a0ea748>:0x007f9a1a0e8a60>):
+    22:         }
+    23:       }
+    24:     </style>
+    25:     <title><%= full_title(yield(:title)) %></title>
+    26:   </head>
+    27:   <body>
+    28:     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__3357230306997976347_70149900936400'
+Started GET "/" for 127.0.0.1 at 2018-04-12 19:59:14 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-04-12 19:59:17 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/kings_cup/index" for 127.0.0.1 at 2018-04-12 19:59:19 -0700
+Processing by KingsCupController#index as HTML
+  Rendering kings_cup/index.html.erb within layouts/application
+  Rendered kings_cup/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
