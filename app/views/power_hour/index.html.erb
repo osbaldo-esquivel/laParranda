@@ -1,13 +1,14 @@
 <title>Power Hour</title>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 text-center">
-            <h1 class="mt-5">Power Hour</h1>
-            <p class="lead">Play some music and hit the Drink buttton when you're ready. Drink a shot of beer each time you hear the ring!</p>
+        <div class="col-lg-12 text-center center jumbotron">
+            <h1 class="mt-5"><%= t('power_hour') %></h1>
+            <p class="lead"><%= t('power_hour_rules') %></p>
             <button type="button" 
             class="btn btn-success" 
             id="drinkButt">Drink</button>
-            <br /><br /><h1 id="counter"></h1>
+            <br /><br />
+            <h1 id="counter"></h1>
             <h1 id="drinkFlash"></h1>
                 <div id="cheers"><a href="/assets/beers-cheers.svg"></a></div>
             <script src="/assets/count.js"></script>

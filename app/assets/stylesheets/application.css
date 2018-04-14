@@ -13,8 +13,38 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #91a3bb;
+}
+#main {
+    padding-top: 60px;
+}
 
- .cards {
+nav {
+    background-color: #91a3bb;
+}
+
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+}
+
+.link {
+    color: #244777;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 9px;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #772447;
+    text-decoration: none;
+}
+
+.cards {
     height: 400px;
     width: 300px;
     text-align: center;

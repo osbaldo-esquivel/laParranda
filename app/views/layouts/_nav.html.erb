@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg fixed-top" id="nav">
+    <div class="container">
+    <%= link_to "La Parranda", welcome_index_path , id: "logo", class: "link" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item active nav-link">
+            <%= link_to "Home", welcome_index_path, class: "link" %>
+            <span class="sr-only">(current)</span>
+            </a>
+        </li>
+        <li class="nav-item active nav-link">
+            <%= link_to "Power Hour", power_hour_index_path, class: "link" %>
+        </li>
+        <li class="nav-item active nav-link">
+            <%= link_to "King's Cup", kings_cup_index_path, class: "link" %>
+        </li>
+        <li class="nav-item active nav-link">
+            <%= link_to "About", about_index_path, class: "link" %>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
