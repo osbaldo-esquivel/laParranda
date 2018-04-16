@@ -1,12 +1,24 @@
 var begin = true;
+var val = 0;
+
+function getVal(min) {
+    val = min;
+}
+
+document.getElementById("custom").addEventListener("click", function() {
+    document.getElementById("mins").style.display = "block";
+});
+
 document.getElementById("drinkButt").addEventListener("click",function() {
-    var sixtyMinutes = new Date();
-    sixtyMinutes.setMinutes(sixtyMinutes.getMinutes() + 60);
+    console.log(val);
+    var minutes = new Date();
+    minutes.setMinutes(minutes.getMinutes() + val);
     var counterFunc = setInterval(function() {
         var timeNow = new Date().getTime();
-        var diff = sixtyMinutes - timeNow;
+        var diff = minutes - timeNow;
         var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         var secs = Math.floor((diff % (1000 * 60)) / 1000);
+
         if(secs < 10) { secs = "0" + secs; }
         document.getElementById("counter").innerHTML = mins + ":" + secs;
 

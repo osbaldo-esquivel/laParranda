@@ -4,6 +4,26 @@
         <div class="col-lg-12 text-center center jumbotron">
             <h1 class="mt-5"><%= t('power_hour') %></h1>
             <p class="lead"><%= t('power_hour_rules') %></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <button class="butts" onclick="getVal('60');">Power Hour</button>
+                        <button class="butts" onclick="getVal('100');">Century Club</button>
+                        <button class="butts" 
+                                id="custom" 
+                                onclick="getVal(document.getElementById('minutes').value)">
+                                Custom
+                        </button>
+                    </div>
+                </div>
+            </div><br />
+            <div id="mins" style="display: none;">
+                <input type="text" 
+                       class="input form-control" 
+                       id="minutes"
+                       placeholder="mins">
+                </input><br />
+            </div>
             <button type="button" 
             class="btn btn-success" 
             id="drinkButt">Drink</button>

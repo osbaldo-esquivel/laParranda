@@ -77,3 +77,18 @@ footer {
       padding-right: 20px;
     }
 }
+
+.butts {
+    background-color: #0e1c2f;
+    color: #91a3bb;
+}
+
+.butts:hover {
+    background-color: #91a3bb;
+    color: #0e1c2f;;
+}
+
+#minutes {
+    width: 100px;
+    margin: 0 auto;
+}
