@@ -14,6 +14,7 @@ document.getElementById("drinkButt").addEventListener("click",function() {
     var minutes = new Date();
     minutes.setMinutes(minutes.getMinutes() + val);
     var counterFunc = setInterval(function() {
+        var cheers = document.getElementById("cheers");
         var timeNow = new Date().getTime();
         var diff = minutes - timeNow;
         var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -21,7 +22,7 @@ document.getElementById("drinkButt").addEventListener("click",function() {
 
         if(secs < 10) { secs = "0" + secs; }
         document.getElementById("counter").innerHTML = mins + ":" + secs;
-
+        
         if (diff < 0) {
             clearInterval(counterFunc);
             document.getElementById("counter").innerHTML = "Congrats on the Power Hour!";
@@ -33,15 +34,15 @@ document.getElementById("drinkButt").addEventListener("click",function() {
             begin = false;
         }
 
-        var cheers = document.getElementById("cheers");
         if(secs == 0) {
             var audio = new Audio("/audios/bell.mp3");
             audio.play();
             var msg = document.getElementById("drinkFlash");
-            
+            cheers.style.display = "block";
             msg.innerText = "Drink!";
             setTimeout(function() {
                 msg.innerText = "";
+                cheers.style.display = "none";
             },3000);
             
         }

@@ -7,11 +7,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <button class="butts" onclick="getVal('60');">Power Hour</button>
-                        <button class="butts" onclick="getVal('100');">Century Club</button>
-                        <button class="butts" 
+                        <button class="btn butts" 
+                                onclick="getVal('60');">
+                                Power Hour
+                        </button>
+                        <button class="btn butts" 
+                                onclick="getVal('100');">
+                                Century Club
+                        </button>
+                        <button class="btn butts" 
                                 id="custom" 
-                                onclick="getVal(document.getElementById('minutes').value)">
+                                onclick="var value = document.getElementById('minutes').value;getVal(value);">
                                 Custom
                         </button>
                     </div>
@@ -25,12 +31,20 @@
                 </input><br />
             </div>
             <button type="button" 
-            class="btn btn-success" 
+            class="btn butts" 
             id="drinkButt">Drink</button>
             <br /><br />
             <h1 id="counter"></h1>
             <h1 id="drinkFlash"></h1>
-                <div id="cheers"><a href="/assets/beers-cheers.svg"></a></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center" 
+                         id="cheers" 
+                         style="display: none;">
+                        <%= image_tag "/assets/beers-cheers.svg", {style: "height:60px;width:100px;"} %>
+                    </div>
+                </div>
+            </div>
             <script src="/assets/count.js"></script>
         </div>
     </div>
