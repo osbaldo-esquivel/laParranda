@@ -3,7 +3,9 @@ var val = 0;
 
 function getVal(mins) {
     val = mins;
-    document.getElementById("counter").innerText = val + " mins";
+    if(mins != "") {
+        document.getElementById("counter").innerText = val + " mins";
+    }
 }
 
 document.getElementById("custom").addEventListener("click", function() {
@@ -11,9 +13,11 @@ document.getElementById("custom").addEventListener("click", function() {
 });
 
 document.getElementById("drinkButt").addEventListener("click",function() {
+    if(val == "") {
+        val = document.getElementById("minutes").value;
+    }
     var currDate = new Date();
     var timeEnds = currDate.setMinutes(currDate.getMinutes() + val*1000);
-    console.log(val);
     var counterFunc = setInterval(function() {
         var timeNow = Date.now();
         var gameTime = timeEnds - timeNow;

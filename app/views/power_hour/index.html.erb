@@ -17,17 +17,19 @@
                         </button>
                         <button class="btn butts" 
                                 id="custom" 
-                                onclick="var value = document.getElementById('minutes').value;getVal(value);">
+                                onclick="getVal(value);">
                                 Custom
                         </button>
                     </div>
                 </div>
             </div><br />
             <div id="mins" style="display: none;">
-                <input type="text" 
+                <input type="number" 
                        class="input form-control" 
                        id="minutes"
-                       placeholder="mins">
+                       placeholder="mins"
+                       min="1"
+                       max="120">
                 </input><br />
             </div>
             <button type="button" 
