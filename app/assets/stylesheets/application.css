@@ -88,12 +88,43 @@ footer {
     color: #0e1c2f;;
 }
 
-#minutes {
-    width: 100px;
+.input {
+    width: 400px;
     margin: 0 auto;
 }
 
 #cheers {
     height: 3px;
     width: 6px;
+}
+
+section {
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+#user {
+    font-size: 1.4em;
+    text-align: left;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+span {
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1;
+}
+
+.user_info {
+    margin-top: 20px;
+}
+
+.grav {
+    float: left;
+    margin-right: 10px;
+}
+
+.gravatar_edit {
+    margin-top: 15px;
 }
