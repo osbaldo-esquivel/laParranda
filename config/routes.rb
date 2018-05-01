@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get 'kings_cup/index'
   get 'welcome/index'
   get 'power_hour/index'
-
+  get '/login',     to: 'sessions#new'
+  post '/login',    to: 'sessions#create'
+  delete '/logout',   to: 'sessions#destroy'
   root 'welcome#index'
   resources :users
 end
