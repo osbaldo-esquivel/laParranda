@@ -41,10 +41,9 @@ document.getElementById("drinkButt").addEventListener("click",function() {
                 1: "/audios/air_horn.mp3",
                 2: "/audios/boxing.mp3",
                 3: "/audios/train.mp3",
-                4: "/audios/woop.mp3",
-                5: "/audios/bell.mp3"
+                4: "/audios/woop.mp3"
             }
-            var randNum = Math.floor(Math.random() * 6);
+            var randNum = Math.floor(Math.random() * 5);
             var audio = new Audio(sounds[randNum]);
             audio.play();
             var msg = document.getElementById("drinkFlash");
