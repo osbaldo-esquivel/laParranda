@@ -137,3 +137,7 @@ span {
     color: red;
     margin: 0 0 30px 0;
 }
+
+.dropdown-menu {
+    background-color: #0e1c2f;
+}
