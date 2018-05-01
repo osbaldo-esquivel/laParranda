@@ -1,5 +1,5 @@
 module SessionsHelper
-    def log_in(user)
+    def sign_in(user)
         session[:user_id] = user.id
     end
 
@@ -10,4 +10,9 @@ module SessionsHelper
     def signed_in?
       !curr_user.nil?
     end  
+
+    def sign_out
+        session.delete(:user_id)
+        @curr_user = nil
+    end
 end
