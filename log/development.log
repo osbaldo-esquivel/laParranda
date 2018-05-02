@@ -12537,3 +12537,80 @@ Processing by PowerHourController#index as HTML
 Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-01 20:18:05 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (763.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (18.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 852ms (Views: 819.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-01 20:18:46 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header.html.erb (350.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (16.6ms)
+  Rendered layouts/_footer.html.erb (12.5ms)
+Completed 200 OK in 492ms (Views: 427.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-01 20:18:53 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pp5i16PYwSHQW9bAZHq+/ShIXt6MDLGnmh1R7YZ/e28lNTes6da+KXgXfzvvb6k3G4i0/xrwHDpiRJRIB7jxpA==", "session"=>{"email"=>"elguey@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "elguey@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 91ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-05-01 20:18:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (25.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/kings_cup/index" for 127.0.0.1 at 2018-05-01 20:18:59 -0700
+Processing by KingsCupController#index as HTML
+  Rendering kings_cup/index.html.erb within layouts/application
+  Rendered kings_cup/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (24.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (19.7ms)
+  Rendered layouts/_footer.html.erb (2.8ms)
+Completed 200 OK in 70ms (Views: 66.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-05-01 20:19:02 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (36.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/power_hour/index" for 127.0.0.1 at 2018-05-01 20:19:07 -0700
+Processing by PowerHourController#index as HTML
+  Rendering power_hour/index.html.erb within layouts/application
+  Rendered power_hour/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (33.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.1ms)
+
+
